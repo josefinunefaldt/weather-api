@@ -35,6 +35,7 @@ Denna service är @Injectable({ providedIn: 'root' }), vilket betyder att den ä
 Jag använder också HttpClient, som är en native Angular-funktion, vilket var något som efterfrågades i instruktionerna.
 /types: Innehåller TypeScript-typer för API-responsen. Jag har utgått från respektive API:s dokumentation för att matcha datatyperna korrekt.
 
+App component html:
 - Ett inputfält som använder [(ngModel)], en inbyggd Angular-funktion för two-way binding, vilket binder det användaren skriver direkt till city-variabeln i komponenten.
 - Användning av Angulars <ng-container> och *ngIf-direktiv för att på ett effektivt sätt visa laddningsindikator medan data hämtas, detta är också native Angular-funktionalitet som styr dynamisk rendering.
 - Bootstrap används för styling och layout.
