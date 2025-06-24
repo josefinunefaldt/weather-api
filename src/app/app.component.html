@@ -1,7 +1,11 @@
 <main class="main">
-  <p class="text-primary fw-bold">
-    {{ title }}
-  </p>
+  <button class="btn btn-primary" (click)="fetchTemperature()">
+    Get Stockholm Temperature
+  </button>
+
+  <div *ngIf="temperature !== null">
+    Current Temperature in stockholm: {{ temperature }} °C
+  </div>
 </main>
 
 <router-outlet />
