@@ -27,19 +27,19 @@ För att förbättra användarflödet har jag även gjort så att knappen "GET C
 
 Jag har strukturerat applikationen efter bästa förmåga utifrån min kunskap inom Angular. Koden är organiserad enligt följande:
 
-/environment: Innehåller API-nyckeln för Geoapify. Jag har valt att lägga den här istället för direkt i koden, för bättre säkerhet och struktur.
+-/environment: Innehåller API-nyckeln för Geoapify. Jag har valt att lägga den här istället för direkt i koden, för bättre säkerhet och struktur.
 
-/services: Här finns min WeatherService, som är applikationens kärna. Den ansvarar för båda API-anropen, först till Geoapify för att hämta koordinater, sedan till Open-Meteo för att hämta temperatur.
+-/services: Här finns min WeatherService, som är applikationens kärna. Den ansvarar för båda API-anropen, först till Geoapify för att hämta koordinater, sedan till Open-Meteo för att hämta temperatur.
 Denna service är @Injectable({ providedIn: 'root' }), vilket betyder att den är tillgänglig globalt som singleton. Om applikationen skulle växa, skulle jag kunna använda den på fler ställen utan att behöva lägga till den i varje komponent.
 
-Jag använder också HttpClient, som är en native Angular-funktion, vilket var något som efterfrågades i instruktionerna.
+-Jag använder också HttpClient, som är en native Angular-funktion, vilket var något som efterfrågades i instruktionerna.
 /types: Innehåller TypeScript-typer för API-responsen. Jag har utgått från respektive API:s dokumentation för att matcha datatyperna korrekt.
 
-app component html
-Ett inputfält som använder [(ngModel)], en inbyggd Angular-funktion för two-way binding, vilket binder det användaren skriver direkt till city-variabeln i komponenten.
-Användning av Angulars <ng-container> och *ngIf-direktiv för att på ett effektivt sätt visa laddningsindikator medan data hämtas,detta är också native Angular-funktionalitet som styr dynamisk rendering.
-Bootstrap används för styling och layout.
-En modalruta visar temperaturinformation efter klick.
-En knapp för att spara väderdatan till CSV-fil (genererad i frontend med Blob).
-En bakgrundsbild som jag lagt till i app.component.css för att ge ett trevligare visuellt intryck.
+- Ett inputfält som använder [(ngModel)], en inbyggd Angular-funktion för two-way binding, vilket binder det användaren skriver direkt till city-variabeln i komponenten.
+- Användning av Angulars <ng-container> och *ngIf-direktiv för att på ett effektivt sätt visa laddningsindikator medan data hämtas, detta är också native Angular-funktionalitet som styr dynamisk rendering.
+- Bootstrap används för styling och layout.
+- En modalruta visar temperaturinformation efter klick.
+- En knapp för att spara väderdatan till CSV-fil (genererad i frontend med Blob).
+- En bakgrundsbild som jag lagt till i app.component.css för att ge ett trevligare visuellt intryck.
+
 
