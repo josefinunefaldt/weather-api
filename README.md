@@ -33,6 +33,7 @@ Jag har strukturerat applikationen efter bästa förmåga utifrån min kunskap i
 Denna service är @Injectable({ providedIn: 'root' }), vilket betyder att den är tillgänglig globalt som singleton. Om applikationen skulle växa, skulle jag kunna använda den på fler ställen utan att behöva lägga till den i varje komponent.
 
 Jag använder också HttpClient, som är en native Angular-funktion, vilket var något som efterfrågades i instruktionerna.
+
 /types: Innehåller TypeScript-typer för API-responsen. Jag har utgått från respektive API:s dokumentation för att matcha datatyperna korrekt.
 
 App component html:
