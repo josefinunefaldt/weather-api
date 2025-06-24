@@ -1,18 +1,24 @@
-<main class="main">
+<main
+  class="d-flex justify-content-center align-items-center bg-cream vh-100"
+  style="gap: 4rem"
+>
   <button
-    class="btn btn-primary"
+    class="btn btn-primary rounded-circle d-flex justify-content-center align-items-center"
+    style="width: 160px; height: 160px; font-weight: 600; font-size: 1.25rem"
     (click)="fetchTemperature()"
     data-bs-toggle="modal"
     data-bs-target="#weatherModal"
   >
-    Get Stockholm Temperature
+    GET TEMP
   </button>
+
   <button
-    class="btn btn-success mt-2"
+    class="btn btn-primary rounded-circle d-flex justify-content-center align-items-center"
+    style="width: 160px; height: 160px; font-weight: 600; font-size: 1.25rem"
     (click)="downloadCSV()"
     [disabled]="temperature === null"
   >
-    Download CSV
+    GET CSV
   </button>
 
   <div
