@@ -26,7 +26,7 @@ export class AppComponent {
   downloadCSV() {
     const header = 'City,Temperature (°C)\n';
     const data = `Stockholm,${this.temperature ?? 'N/A'}\n`;
-    const csvContent = header + data;
+    const csvContent = '\uFEFF' + header + data;
 
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
