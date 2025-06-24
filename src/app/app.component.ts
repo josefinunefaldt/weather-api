@@ -22,4 +22,18 @@ export class AppComponent {
         console.error('Error fetching temperature in stockholm', err),
     });
   }
+
+  downloadCSV() {
+    const header = 'City,Temperature (°C)\n';
+    const data = `Stockholm,${this.temperature ?? 'N/A'}\n`;
+    const csvContent = header + data;
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'weather.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
 }
