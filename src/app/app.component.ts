@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'weather-app';
   private weatherService = inject(WeatherService);
   city = 'Stockholm';
   temperature: number | null = null;
