@@ -7,7 +7,11 @@
   >
     Get Stockholm Temperature
   </button>
-  <button class="btn btn-success mt-2" (click)="downloadCSV()">
+  <button
+    class="btn btn-success mt-2"
+    (click)="downloadCSV()"
+    [disabled]="temperature === null"
+  >
     Download CSV
   </button>
 
