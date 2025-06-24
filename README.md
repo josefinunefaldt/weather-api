@@ -13,7 +13,7 @@ Eller för att köra ESLint innan start:
 ```bash
 npm run start
 ```
-Vid lyckat test körs ng serve automatiskt.
+Vid lyckat test körs ng serve automatiskt
 
 
 ## Applikationens syfte
@@ -24,6 +24,7 @@ Jag ville ta fasta på något som ni skrev i mejlet: "Vi tycker om kreativa lös
 För att förbättra användarflödet har jag även gjort så att knappen "GET CSV" endast är aktiv efter att temperaturdata har hämtats, och om ett fel uppstår vid API-anrop (t.ex. felstavat stadsnamn), så visas i stället temperaturen för Stockholm som standard. På så sätt garanteras att applikationen alltid visar någon data, oavsett fel.
 
 ## Kod och struktur
+Jag har naturligtvis använt Node.js för att bygga mitt projekt. Paket har installerats via npm, och därefter har jag lagt till nödvändiga beroenden i json-filer, bland annat för ESLint och Bootstrap. Slutligen har jag byggt och utvecklat hela Angular-projektet ovanpå detta.
 
 Jag har strukturerat applikationen efter bästa förmåga utifrån min kunskap inom Angular. Koden är organiserad enligt följande:
 
@@ -43,5 +44,7 @@ App component html:
 - En modalruta visar temperaturinformation efter klick.
 - En knapp för att spara väderdatan till CSV-fil (genererad i frontend med Blob).
 - En bakgrundsbild som jag lagt till i app.component.css för att ge ett trevligare visuellt intryck.
+
+
 
 
