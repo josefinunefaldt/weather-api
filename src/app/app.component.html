@@ -1,10 +1,50 @@
 <main class="main">
-  <button class="btn btn-primary" (click)="fetchTemperature()">
+  <button
+    class="btn btn-primary"
+    (click)="fetchTemperature()"
+    data-bs-toggle="modal"
+    data-bs-target="#weatherModal"
+  >
     Get Stockholm Temperature
   </button>
 
-  <div *ngIf="temperature !== null">
-    Current Temperature in stockholm: {{ temperature }} °C
+  <div
+    class="modal fade"
+    id="weatherModal"
+    tabindex="-1"
+    aria-labelledby="weatherModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title w-100 text-center fs-4">Weather Info</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <ng-container *ngIf="temperature !== null; else loading">
+            <div class="text-center w-100">
+              Current Temperature in Stockholm: {{ temperature }} °C
+            </div>
+          </ng-container>
+          <ng-template #loading> Loading temperature... </ng-template>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
