@@ -15,10 +15,15 @@ export class AppComponent {
   private weatherService = inject(WeatherService);
   city = 'Stockholm';
   temperature: number | null = null;
+  temperatureData: { city: string; temperature: number }[] = [];
 
   fetchTemperature() {
     this.weatherService.getTemperatureByCity(this.city).subscribe({
-      next: (temp) => (this.temperature = temp),
+      next: (temp) => {
+        this.temperature = temp;
+        this.temperatureData.push({ city: this.city, temperature: temp });
+        console.log('Temperature data array:', this.temperatureData);
+      },
       error: (err) =>
         console.error(`Error fetching temperature for ${this.city}`, err),
     });
