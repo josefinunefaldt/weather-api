@@ -4,8 +4,15 @@
 >
   <div class="d-flex gap-5 mt-10">
     <button
-      class="btn btn-primary rounded-circle d-flex justify-content-center align-items-center"
-      style="width: 160px; height: 160px; font-weight: 600; font-size: 1.25rem"
+      class="btn rounded-circle d-flex justify-content-center align-items-center"
+      style="
+        width: 160px;
+        height: 160px;
+        font-weight: 600;
+        font-size: 1.25rem;
+        background-color: #5f7470;
+        color: white;
+      "
       (click)="fetchTemperature()"
       data-bs-toggle="modal"
       data-bs-target="#weatherModal"
@@ -14,8 +21,15 @@
     </button>
 
     <button
-      class="btn btn-primary rounded-circle d-flex justify-content-center align-items-center"
-      style="width: 160px; height: 160px; font-weight: 600; font-size: 1.25rem"
+      class="btn rounded-circle d-flex justify-content-center align-items-center"
+      style="
+        width: 160px;
+        height: 160px;
+        font-weight: 600;
+        font-size: 1.25rem;
+        background-color: #5f7470;
+        color: white;
+      "
       (click)="downloadCSV()"
       [disabled]="temperature === null"
     >
