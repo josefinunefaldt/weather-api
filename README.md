@@ -37,6 +37,9 @@ Jag använder också HttpClient, som är en native Angular-funktion, vilket var 
 
 /types: Innehåller TypeScript-typer för API-responsen. Jag har utgått från respektive API:s dokumentation för att matcha datatyperna korrekt. Geoapify har jag använt väldigt många gånger, så det var inte något som jag direkt behövde sätta mig in i.
 
+App component ts:
+Hanterar användarens stadinmatning, hämtar aktuell temperatur via WeatherService och erbjuder möjlighet att spara datan som en CSV-fil.
+
 App component html:
 - Ett inputfält som använder [(ngModel)], en inbyggd Angular-funktion för two-way binding, vilket binder det användaren skriver direkt till city-variabeln i komponenten.
 - Användning av Angulars <ng-container> och *ngIf-direktiv för att på ett effektivt sätt visa laddningsindikator medan data hämtas, detta är också native Angular-funktionalitet som styr dynamisk rendering.
