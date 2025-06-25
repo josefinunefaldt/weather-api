@@ -35,7 +35,7 @@ Denna service är @Injectable({ providedIn: 'root' }), vilket betyder att den ä
 
 Jag använder också HttpClient, som är en native Angular-funktion, vilket var något som efterfrågades i instruktionerna.
 
-/types: Innehåller TypeScript-typer för API-responsen. Jag har utgått från respektive API:s dokumentation för att matcha datatyperna korrekt.
+/types: Innehåller TypeScript-typer för API-responsen. Jag har utgått från respektive API:s dokumentation för att matcha datatyperna korrekt. Geoapify har jag använt väldigt många gånger, så det var inte något som jag direkt behövde sätta mig in i.
 
 App component html:
 - Ett inputfält som använder [(ngModel)], en inbyggd Angular-funktion för two-way binding, vilket binder det användaren skriver direkt till city-variabeln i komponenten.
